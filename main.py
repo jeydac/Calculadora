@@ -34,10 +34,18 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
-            num1 = float(input("Insira o primeiro número: "))
-            num2 = float(input("Insira o segundo número: "))
-            operador = input("Qual a operação que pretende fazer? (+ - * /)")
-
+            #print('Insira o número, o sinal de operação e o segundo número, carregando Enter entre cada inserção.')
+            print('Operações disponíveis:')
+            print('+  (soma)\n-  (subtração)')
+            print('*  (multiplicação)\n/  (divisão)')
+            print('** (exponenciação)\n')
+            print('----------------------------------\n')
+            
+            # Solicitar números e operador ao utilizador
+            num1 = float(input('Insira o primeiro número: '))
+            operador = input('Seguido do operador (+, -, *, /, **): ')
+            num2 = float(input('Insira o segundo número: '))
+            
             resultado = calculadora(num1, num2, operador)
             print(f"\nResultado: {resultado}")
 
