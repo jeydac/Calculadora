@@ -12,6 +12,14 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     result = float("nan")
     if operador == '+':
         result = num1 + num2
+    elif operador == "-":
+        result = num1 - num2
+    elif operador == "*":
+        result = num1 * num2
+    elif operador == "/":
+        result = num1 / num2
+    else:
+        print("Operação inválida")
 
     return result
 
