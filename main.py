@@ -10,6 +10,7 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     sinalizando que o cálculo não pôde ser realizado.
     """
     result = float("nan")
+    
     if operador == '+':
         result = num1 + num2
     elif operador == "-":
@@ -31,6 +32,17 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
+            num1 = float(input("Insira o primeiro número: "))
+            num2 = float(input("Insira o segundo número: "))
+            operador = input("Qual a operação que pretende fazer? (+ - * /)")
+
+            resultado = calculadora(num1, num2, operador)
+            print(f"\nResultado: {resultado}")
+
+            continuar = input("\nDeseja continuar? (s/n): ").strip().lower()
+            if continuar != 's':
+                print('\nVolte sempre!\n')
+                break
 
 
         except ValueError:
@@ -40,8 +52,6 @@ if __name__ == "__main__":
         except ZeroDivisionError:
             print('Impossível dividir por zero! -> Tente novamente!')
             time.sleep(2)
-
-    print('\nVolte sempre!\n')
     
     
     
